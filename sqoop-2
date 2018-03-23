@@ -1,0 +1,15 @@
+sqoop eval \
+--connect jdbc:mysql://localhost:3306/retail_db \
+--username root \
+--password cloudera \
+--query "show tables;"
+
+sqoop list-databases \
+--connect jdbc:mysql://localhost:3306 \
+--username root \
+--password cloudera;"
+
+sqoop list-tables \
+--connect jdbc:mysql://localhost:3306/retail_db \
+--username root \
+--password cloudera"
