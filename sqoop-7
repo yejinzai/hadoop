@@ -1,0 +1,15 @@
+--mysql
+create database problem8;
+use problem8;
+grant all on problem8 to root; 
+flush privileges;
+create table export (ticker varchar(50), trademonth varchar(50), vol bigint);
+
+--sqoop
+sqoop export \
+--connect jdbc:mysql://localhost:3306/problem8 \
+--table export \
+--username root \
+--password cloudera \
+--export-dir /user/hive/warehouse/problem7.db/stocks_revenue_monthly \
+--fields-terminated-by ','
