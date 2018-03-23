@@ -1,0 +1,11 @@
+sqoop import \
+--connect jdbc:mysql://localhost:3306/retail_db \
+--username retail_dba \
+--password cloudera \
+--table customers \
+--target-dir '/user/cert/problem6/solution/' \
+--m 8 --compress --compression-codec 'org.apache.hadoop.io.compress.SnappyCodec' \
+--fields-terminated-by '|';
+
+
+hdfs dfs -ls /user/cert/problem6/solution
