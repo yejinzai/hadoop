@@ -1,0 +1,6 @@
+sqoop import-all-tables \
+--connect jdbc:mysql://localhost:3306/retail_db \
+--username retail_dba 
+--password cloudera  \
+--warehouse-dir '/user/problem10/a/' \
+--fields-terminated-by '|'
