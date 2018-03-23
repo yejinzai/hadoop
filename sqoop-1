@@ -1,0 +1,7 @@
+sqoop import \
+--connect jdbc:mysql://gateway/problem1 \
+--username cloudera \
+--password cloudera \
+--table customer \
+--warehouse-dir '/user/cert/problem1/solution/' \
+--fields-terminated-by ','
