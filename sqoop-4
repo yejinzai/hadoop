@@ -1,0 +1,7 @@
+sqoop import-all-tables \
+--connect jdbc:mysql://localhost:3306/retail_db \
+--username retail_dba \
+--password cloudera  \
+--hive-import \
+--hive-database problem5 \
+--fields-terminated-by '|'
